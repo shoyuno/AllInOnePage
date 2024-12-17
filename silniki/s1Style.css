@@ -1,0 +1,83 @@
+@import url('https://fonts.googleapis.com/css2?family=Edu+NSW+ACT+Foundation:wght@500&display=swap');
+input[type=range]
+{
+    -webkit-appearance: none;
+    width: 80%;
+    height: 2.5vmin;
+    border: solid black 0.3vmin;
+    background: white;
+    box-sizing: content-box;
+    outline: none;
+    margin-top: 0.25vmin;
+    margin-bottom: 0.25vmin;
+}
+input[type=range]::-webkit-slider-thumb
+{
+    -webkit-appearance: none;
+    width: 1.5vmin;
+    height: 3vmin;
+    cursor: pointer;
+    background: black;
+}
+input[type=range]:not(:disabled):hover::-webkit-slider-thumb
+{
+    background: #32a83f;   
+}
+input[type=range]:disabled::-webkit-slider-thumb
+{
+    cursor: default 
+}
+p
+{
+    color: white;
+    font-size: 2.5vmin;
+    font-family: 'Edu NSW ACT Foundation';
+    margin-bottom: 0.25vmin;
+    letter-spacing: 0.25vmin;
+}
+.numbers
+{
+    margin-top: 0.25vmin;
+    margin-bottom: 0.25vmin;
+}
+input[type=number]
+{
+    width: 3vmin;
+    height: 3vmin;
+    text-align: center;
+    margin-left: 0.5vmin;
+    margin-right: 0.5vmin;
+    outline: none;
+    background-color: white;
+    border: solid black 0.3vmin;
+    color: black;
+    font-size: 1.75vmin;
+    font-family: 'Edu NSW ACT Foundation';
+    font-weight: bold;
+}
+input[type=number]:not(:disabled):hover
+{
+    border: solid #32a83f 0.3vmin;
+}
+input[type=number]::-webkit-inner-spin-button 
+{
+    -webkit-appearance: none;
+}
+button
+{
+    width: 80%;
+    border-radius: 1vmin;
+    height: 3vmin;
+    margin-top: 0.25vmin;
+    box-shadow: 0.1vmin 0.3vmin #888;
+    text-transform: uppercase;
+    letter-spacing: 0.1vmin;
+    font-family: 'Edu NSW ACT Foundation';
+    font-weight: bold;
+    font-size: 1.5vmin;
+}
+button:not(:disabled):active
+{
+    box-shadow: 0vmin 0vmin black;
+    transform: translateY(0.2vmin);
+}

@@ -1,0 +1,54 @@
+<html>
+    <body>
+        <div class="controlsItem">
+            <p> Wysokość </p>
+            <input type="range" min="0" max="10" value="0" step="0.1" id="height0" oninput=getHeight0(this.value)> 
+            <div class="numbers"> 
+                <input type="number" value=0 id="height1" onchange=getHeight1(this.value)> 
+                <input type="number" value=0 id="height2" onchange=getHeight2(this.value)> 
+                <input type="number" value=10 id="height3" onchange=getHeight3(this.value)> 
+            </div>
+            <button onclick=animateHeight()> Animacja </button>
+        </div>
+        <div class="controlsItem">
+            <p> Prędkość </p>
+            <input type="range" min="0" max="10" value="0" id="velocity0" oninput=getVelocity0(this.value)>
+            <div class="numbers"> 
+                <input type="number" value=0 id="velocity1" onchange=getVelocity1(this.value)> 
+                <input type="number" value=0 id="velocity2" onchange=getVelocity2(this.value)> 
+                <input type="number" value=10 id="velocity3" onchange=getVelocity3(this.value)> 
+            </div>
+            <button onclick=animateVelocity()> Animacja </button>
+        </div>
+        <div class="controlsItem">
+            <p> Kąt </p>
+            <input type="range" min="0" max="180" value="90" id="angle0" oninput=getAngle0(this.value)> 
+            <div class="numbers"> 
+                <input type="number" value=0 id="angle1" onchange=getAngle1(this.value)> 
+                <input type="number" value=90 id="angle2" onchange=getAngle2(this.value)> 
+                <input type="number" value=180 id="angle3" onchange=getAngle3(this.value)> 
+            </div>
+            <button onclick=animateAngle()> Animacja </button>
+        </div>
+        <div class="controlsItem">
+            <p> Dokładność </p>
+            <input type="range" min="2" max="250" value="50" id="accuracy0" oninput=getAccuracy0(this.value)> 
+            <div class="numbers"> 
+                <input type="number" value=2 disabled id="accuracy1">  
+                <input type="number" value=50 id="accuracy2" onchange=getAccuracy2(this.value)> 
+                <input type="number" value=250 disabled id="accuracy3" onchange=getAccuracy3(this.value)> 
+            </div>
+            <button disabled onclick=clear()> Wyczyść </button>
+        </div>
+        <div class="controlsItem">
+            <p> Punkt </p>
+            <input type="range" min="0" max="50" value="0" step="1" id="points0" oninput=getPoints0(this.value)> 
+            <div class="numbers"> 
+                <input type="number" value=0 disabled id="points1"> 
+                <input type="number" value=0 id="points2" onchange=getPoints2(this.value)> 
+                <input type="number" value=50 disabled id="points3" > 
+            </div>
+            <button disabled onclick=save()> Zapisz </button>
+        </div>
+    </body>
+</html>

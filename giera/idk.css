@@ -1,0 +1,93 @@
+*
+{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+:root, ::after, ::before
+{
+    --width: 50vmin; 
+    --height: calc(50vmin*1.1547); 
+    --margin: 0.5vmin
+}
+body
+{
+    background-color: #2a2a2a;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    transform: rotate3D(1,0,0,60deg) 
+}
+div.row
+{
+    display: flex;
+    flex-direction: row;
+    margin-bottom: calc(var(--height)*(-0.25) + var(--margin));
+}
+div.row:nth-child(2n)
+{
+    transform: translateX(calc((var(--width) + var(--margin))/2))
+}
+div.top
+{
+    clip-path: polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%);
+    background-color: white;
+    flex-grow: 1;
+    height: var(--height);
+    width: var(--width);
+    
+    background-image: url("./ludzik.PNG");
+    background-position: center;
+    background-size: cover;
+    transition: 0.7s;
+
+    
+}
+div.leftSide
+{
+    position: absolute;
+    left: 0;
+    top: var(--width);
+    width: calc(var(--width)/2);
+    height: calc(var(--height)/5);
+    background-color: white;
+    /* transform: skewY(30deg); */
+    border-top: solid black 0.4vmin;
+    border-right: solid black 0.2vmin;
+    transition: 0.7s;
+}
+div.rightSide
+{
+    position: absolute;
+    right: 0;
+    top: var(--width);
+    width: calc(var(--width)/2);
+    height: calc(var(--height)/5);
+    background-color: white;
+    transform: skewY(-30deg);
+    border-top: solid black 0.4vmin;
+    border-left: solid black 0.2vmin;
+    transition: 0.7s;
+}
+
+div.tile
+{
+    position: relative;
+    transition: 0.7s;
+}
+/* div.tile:hover .top
+{
+    transform: rotate(60deg);
+} 
+div.tile:hover .rightSide
+{
+    transform:  translate(-100%) skewY(30deg);
+    background-color: red;
+}  */
+div.tile:hover .leftSide
+{
+    transform: xd;
+    background-color: red;
+} 

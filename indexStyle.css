@@ -1,0 +1,82 @@
+@import url('https://fonts.googleapis.com/css2?family=Edu+NSW+ACT+Foundation:wght@500&display=swap');
+*
+{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box
+}
+body
+{
+    background-color: #2a2a2a;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+ul
+{
+    transform: skewY(-20deg)
+}
+ul li
+{
+    position: relative;
+    background-color: #999;
+    list-style-type: none;
+    width: 50vmin;
+    height: 10vmin;
+    z-index: var(--i);
+    transition: 0.7s;
+}
+ul li a
+{
+    display: block;
+    padding: 3vmin 0 0 5vmin;
+    width: 50vmin;
+    height: 100%;
+    font-size: 5vmin;
+    letter-spacing: 0.1vmin;
+    text-transform: uppercase;
+    font-family: 'Edu NSW ACT Foundation';
+    text-decoration: none;
+    color: black
+}
+ul li:hover
+{
+    transform: translateX(-10vmin);
+    background-color: #32a83f;
+}
+ul li:hover a
+{
+    color: #DDD;
+} 
+ul li::before
+{
+    content: "";
+    background-color: #777;
+    position: absolute;
+    height: 10vmin;
+    width: 7.5vmin;
+    top: 0;
+    left: 0;
+    transform-origin: right;
+    transform: translateX(-7.5vmin) skewY(45deg);
+}
+ul li:hover::before
+{
+    background-color: #299134;
+}
+ul li::after
+{
+    content: "";
+    background-color: #777;
+    position: absolute;
+    width: 50vmin;
+    height: 7.5vmin;
+    top: 0;
+    left: 0;
+    transform-origin: bottom;
+    transform: translateY(-7.5vmin) skewX(45deg);
+}
+ul li:hover::after
+{
+    background-color: #299134;
+}
