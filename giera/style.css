@@ -95,7 +95,7 @@ div.cube
     transform-origin: 50% 50%;
     position: absolute;
     rotate: x 45deg;
-} 
+}
 div.cube:active
 {
     cursor: move;
